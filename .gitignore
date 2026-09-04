@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Whitelist specific files
+!main.tex
+!Mahmud\ Abdul\ Aziz\ Rohan.pdf
