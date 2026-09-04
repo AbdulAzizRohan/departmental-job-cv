@@ -12,6 +12,7 @@
 ]{geometry} % for adjusting page geometry
 \usepackage{titlesec} % for customizing section titles
 \usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{booktabs} % for clean horizontal rules in tables
 \usepackage{array} % tabularx requires this
 \usepackage[dvipsnames]{xcolor} % for coloring text
 \definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
@@ -160,6 +161,21 @@
   }%
 }%
 
+\newcommand{\placeprofilephoto}{%
+  \AddToShipoutPictureFG*{%
+    \put(
+      \LenToUnit{\paperwidth-0.75in-2.5cm},
+      \LenToUnit{\paperheight-0.75in-1.9cm}
+    ){%
+      \begin{tikzpicture}
+        \clip (0,0) circle (1.25cm);
+        \node at (0,0) {\includegraphics[width=2.5cm, height=2.5cm,
+        keepaspectratio]{profile_photo.png}};
+      \end{tikzpicture}
+    }%
+  }%
+}%
+
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
 
@@ -174,8 +190,7 @@
 \sbox\ANDbox{$|$}
 
 \begin{header}
-  \begin{tabularx}{\textwidth}{@{} X @{\hspace{15pt}} r @{}}
-    % Left-aligned Contact Information & Name
+  \begin{tabularx}{\textwidth}{@{} X @{}}
     \raggedright
     {\fontsize{20pt}{20pt}\selectfont \textbf{Mahmud Abdul Aziz Rohan}}
 
@@ -199,15 +214,10 @@
     \AND%
     \kern 5.0 pt%
     \mbox{\hrefWithoutArrow{https://abdulazizrohan.github.io/abdulazizrohan/}{abdulazizrohan.github.io/abdulazizrohan/}}%
-    &
-    % Top Right Round Photo
-    \begin{tikzpicture}[baseline=(current bounding box.center)]
-      \clip (0,0) circle (1.25cm); % Adjust radius to change size
-      \node at (0,0) {\includegraphics[width=2.5cm, height=2.5cm,
-      keepaspectratio]{profile_photo.png}}; % Replace with your filename
-    \end{tikzpicture}
   \end{tabularx}
 \end{header}
+
+\placeprofilephoto
 
 \vspace{5 pt - 0.3 cm}
 
@@ -241,133 +251,54 @@
 
 \section{Education}
 
-\begin{twocolentry}{
-    2022 – 2026
-  }
-  \textbf{Khulna University of Engineering \& Technology},
-  Khulna-9203, Bangladesh
-\end{twocolentry}
-
 \begin{onecolentry}
-  B.Sc. in Energy Science and Engineering | CGPA 2.80/4.00 \\
-  Coursework: Thermodynamics | Fluid Mechanics | Heat and Mass
-  Transfer | Power Plant Engineering | Renewable Energy Engineering
-  | IC Engines | HVAC\&R | Engineering Drawing and Simulation |
-  Electrical Fundamentals
+  \begin{tabularx}{\textwidth}{@{} X p{7.5cm} r @{}}
+    % \toprule
+    \textbf{Institution} & \textbf{Degree / Result} & \textbf{Period} \\
+    \midrule
+    \textbf{Khulna University of Engineering \& Technology}, Khulna-9203,
+    Bangladesh & B.Sc.\ in Energy Science and Engineering, CGPA
+    2.80/4.00 & 2022 -- 2026 \\
+    \textbf{Govt. Science College}, Tejgaon, Dhaka-1215 & Higher Secondary
+    Certificate, GPA 5.00/5.00 & 2018 -- 2021 \\
+    \textbf{Bright School and College}, Donia, Dhaka-1236 & Secondary School
+    Certificate, GPA 5.00/5.00 & 2018 \\
+    \midrule
+  \end{tabularx}
 \end{onecolentry}
 
 \vspace{0.1 cm}
 
-\begin{twocolentry}{
-    2018 – 2021
-  }
-  \textbf{Govt. Science College}, Tejgaon, Dhaka-1215\\
-  Higher Secondary Certificate | GPA 5.00/5.00
-\end{twocolentry}
-
-\vspace{0.1 cm}
-
-\begin{twocolentry}{
-    2018
-  }
-  \textbf{Bright School and College}, Donia, Dhaka-1236\\
-  Secondary School Certificate | GPA 5.00/5.00
-\end{twocolentry}
+\begin{onecolentry}
+  \small \textit{Notable Coursework: Thermodynamics, Fluid Mechanics, Heat and
+    Mass Transfer, Power Plant Engineering, Renewable Energy
+    Engineering, IC Engines, HVAC\&R, Engineering Drawing and
+  Simulation, Electrical Fundamentals}
+\end{onecolentry}
 
 % -------------------------------- Experience ----------------------------------
 
 \section{Professional Experience \& Workshops}
 
 \begin{onecolentry}
-  \textbf{Industrial Attachment}, Karnaphuli Power Ltd, Chattogram
-  \hfill
-  Sep 2024
-
-  \begin{highlightsforbulletentries}
-    % \item Completed training on steam and diesel power plant
-    %   operation and their key components and subsystems.
-  \item Gained hands‑on experience operating steam and diesel
-    power‑plant components, mastering key subsystems.
-  \end{highlightsforbulletentries}
+  \begin{tabularx}{\textwidth}{@{} p{6.5cm} p{8.7cm} X @{}}
+    % \toprule
+    \textbf{Role / Training} & \textbf{Key
+    Experience Gained} & \textbf{Period}  \\
+    \midrule
+    Industrial Attachment, Karnaphuli Power Ltd, Chattogram &
+    Gained hands-on experience operating steam and diesel power-plant
+    components, mastering key subsystems. &
+    Sep 2024 \\
+    \addlinespace
+    Training on Occupational Safety, Health \& Environment
+    Management, KUET &
+    Conducted hazard identification and applied risk-analysis methods
+    to improve occupational safety management. &
+    May 2024 \\
+    \midrule
+  \end{tabularx}
 \end{onecolentry}
-
-% \begin{twocolentry}{
-%     May 2024
-% }
-%   \textbf{Training on Occupational Safety, Health \& Environment\\
-%   Management}\\ Department of Energy Science and Engineering, Khulna
-%   University of Engineering \& Technology, Khulna-9203, Bangladesh
-% \end{twocolentry}
-
-\begin{onecolentry}
-  \textbf{Training on Occupational Safety, Health \& Environment
-  Management} \hfill May 2024 \\ Department of Energy Science and
-  Engineering, Khulna
-  University of Engineering \& Technology
-
-  \begin{highlightsforbulletentries}
-    % \item Mastered about hazard identification, different risk analysis
-    %   methods and effective environment management strategies for
-    %   occupational safety.
-  \item Conducted hazard identification and applied risk‑analysis
-    methods to improve occupational safety management.
-  \end{highlightsforbulletentries}
-\end{onecolentry}
-
-% \vspace{0.2 cm}
-
-% \begin{twocolentry}{
-%   February 2024
-% }
-%   \textbf{Wrokshop on Crafting Innovation: Bridging Entrepreneurship and
-%   Hardware Projects in the Fab Lab Ecosystem}, FabLab, Khulna University of
-%   Engineering \& Technology, Khulna-9203, Bangladesh
-% \end{twocolentry}
-%
-% \vspace{0.10 cm}
-% \begin{onecolentry}
-%   \begin{highlights}
-%     \item Learned about different manufacturing process, e.g., additive,
-%       subtractive
-%     \item Learned about different buisness models for utilizing
-%       manufacturing techniques for a successful business
-%   \end{highlights}
-% \end{onecolentry}
-%
-%
-% \vspace{0.2 cm}
-%
-% \begin{twocolentry}{
-%   February 2024
-% }
-%   \textbf{Industrial Visit in HAMKO}, FabLab, Khulna University of
-%   Engineering \& Technology, Khulna-9203, Bangladesh
-% \end{twocolentry}
-%
-% \vspace{0.10 cm}
-% \begin{onecolentry}
-%   \begin{highlights}
-%     \item
-%     \item
-%   \end{highlights}
-% \end{onecolentry}
-%
-%
-% \vspace{0.2 cm}
-%
-% \begin{twocolentry}{
-%   February 2024
-% }
-%   \textbf{Industrial Visit in Atomic Energy Research Establishment}, Dhaka
-% \end{twocolentry}
-%
-% \vspace{0.10 cm}
-% \begin{onecolentry}
-%   \begin{highlights}
-%     \item
-%     \item
-%   \end{highlights}
-% \end{onecolentry}
 
 % ------------------------------ Projects --------------------------------------
 
@@ -384,15 +315,6 @@
     compression refrigeration cycles, achieving an average
     improvement of 32\% in COP and 24\% in exergetic efficiency across
     multiple refrigerants.
-    % \item Compared basic and multistage
-    % VCRC performance across four
-    %   low-GWP refrigerants over full evaporation/condensation ranges,
-    %   uncovering a cycle-dependent crossover where R1233ZDE overtakes
-    %   hydrocarbon refrigerants in COP and exergetic efficiency once staged
-    % \item Optimized refrigerant-cycle combinations via entropy-weighted
-    %   multi-criteria analysis, identifying multistage R1233ZDE as
-    %   achieving the highest COP (3.278) and exergetic efficiency
-    %   (0.766) among all fluids at a lower cost than both hydrocarbons
   \end{highlightsforbulletentries}
 \end{onecolentry}
 
@@ -412,20 +334,18 @@
 \section{Skills}
 
 \begin{onecolentry}
-  \textbf{Engineering Tools \& Software:} CAD (SolidWorks, FreeCAD),
-  MATLAB, \LaTeX, Linux Environment
+  \begin{tabularx}{\textwidth}{@{} l X @{}}
+    % \toprule
+    \textbf{Category} & \textbf{Tools / Competencies} \\
+    \midrule
+    Engineering Tools \& Software & CAD (SolidWorks, FreeCAD),
+    MATLAB, \LaTeX, Linux Environment \\
+    Technical \& Data Analysis & NumPy, SciPy, SymPy, Matplotlib,
+    Python (predictive modeling), Thermodynamic Analysis (Energy,
+    Exergy, Exergoeconomic) \\
+    \midrule
+  \end{tabularx}
 \end{onecolentry}
-
-\begin{onecolentry}
-  \textbf{Technical \& Data Analysis:} Engineering Computation
-  (NumPy, SciPy, SymPy), Data Visualization (Matplotlib), Predictive
-  Modeling (Python), Thermodynamic Analysis (Energy, Exergy, Exergoeconomic)
-\end{onecolentry}
-
-% \begin{onecolentry}
-%   \textbf{Core Competencies:} Mechanical Inspection, Thermal Systems
-%   Troubleshooting, Maintenance Planning Support, Technical Documentation
-% \end{onecolentry}
 
 % ----------------- Extracurricular Activities ---------------------------------
 
@@ -437,38 +357,16 @@
     segment at Energy Fest 1.0.
   \item Acquired management experience as Treasurer at Energy and
     Automation Club.
-  \item
-    \href{https://www.worldcubeassociation.org/persons/2025ROHA01}{Secured
-      an average time of 18.89 s in 3x3x3 Rubik's Cube segment at
-    KUET MSE Cube Rush 2025.}
-    % \item Participated in Intra KUET Programming Contest
+    % \item
+    %   \href{https://www.worldcubeassociation.org/persons/2025ROHA01}{Secured
+    %     an average time of 18.89 s in 3x3x3 Rubik's Cube segment at
+    %   KUET MSE Cube Rush 2025.}
   \end{highlightsforbulletentries}
 \end{onecolentry}
 
 % -------------------------------- References ----------------------------------
 
 \section{References}
-
-% \begin{twocolentry}{
-%     Ali Kamal Mostofa Rubel \\
-%     Safety Analyst \\
-%     \href{https://www.nirapon.org/}{Nirapon Inc.} \\
-%     9\textsuperscript{th} Floor, Concord MB Tower,
-%     House-81, Road-11, Banani,
-%     Dhaka-1213, Bangladesh \\
-%     Phone: \mbox{\hrefWithoutArrow{tel:+8801682560119}{01682-560119}} \\
-%     Email:
-%     \hrefWithoutArrow{mailto:alikamal.rubel@nirapon.org}{alikamal.rubel@nirapon.org}
-%   }
-%   Mostafizur Rahaman \\
-%   Assistant Professor \\
-%   Department of Energy Science and Engineering \\
-%   Khulna University of Engineering \& Technology \\
-%   Khulna-9203, Bangladesh \\
-%   Phone: \mbox{\hrefWithoutArrow{tel:+8801903767842}{01903-767842}} \\
-%   E-mail:
-%   \hrefWithoutArrow{mailto:mostafiz@ese.kuet.ac.bd}{mostafiz@ese.kuet.ac.bd}
-% \end{twocolentry}
 
 \begin{onecolentry}
   \begin{minipage}[t]{0.48\textwidth}
