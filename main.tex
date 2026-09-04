@@ -160,6 +160,21 @@
   }%
 }%
 
+\newcommand{\placeprofilephoto}{%
+  \AddToShipoutPictureFG*{%
+    \put(
+      \LenToUnit{\paperwidth-0.75in-2.5cm},
+      \LenToUnit{\paperheight-0.75in-1.9cm}
+    ){%
+      \begin{tikzpicture}
+        \clip (0,0) circle (1.25cm);
+        \node at (0,0) {\includegraphics[width=2.5cm, height=2.5cm,
+        keepaspectratio]{profile_photo.png}};
+      \end{tikzpicture}
+    }%
+  }%
+}%
+
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
 
@@ -174,8 +189,7 @@
 \sbox\ANDbox{$|$}
 
 \begin{header}
-  \begin{tabularx}{\textwidth}{@{} X @{\hspace{15pt}} r @{}}
-    % Left-aligned Contact Information & Name
+  \begin{tabularx}{\textwidth}{@{} X @{}}
     \raggedright
     {\fontsize{20pt}{20pt}\selectfont \textbf{Mahmud Abdul Aziz Rohan}}
 
@@ -199,15 +213,9 @@
     \AND%
     \kern 5.0 pt%
     \mbox{\hrefWithoutArrow{https://abdulazizrohan.github.io/abdulazizrohan/}{abdulazizrohan.github.io/abdulazizrohan/}}%
-    &
-    % Top Right Round Photo
-    \begin{tikzpicture}[baseline=(current bounding box.center)]
-      \clip (0,0) circle (1.25cm); % Adjust radius to change size
-      \node at (0,0) {\includegraphics[width=2.5cm, height=2.5cm,
-      keepaspectratio]{profile_photo.png}}; % Replace with your filename
-    \end{tikzpicture}
   \end{tabularx}
 \end{header}
+\placeprofilephoto
 
 \vspace{5 pt - 0.3 cm}
 
