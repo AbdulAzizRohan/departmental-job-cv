@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.7.6)  4 SEP 2026 15:05
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.7.6)  4 SEP 2026 15:51
  system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -754,15 +754,15 @@ L3 programming layer <2026-01-19>
 
 Here is how much of LuaTeX's memory you used:
  28261 strings out of 476076
- 125011,1144653 words of node,token memory allocated
+ 125007,1144653 words of node,token memory allocated
  740 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 math, 2 glue, 4 kern, 2 glyph, 11 attribute, 91 glue_spec, 11 attribute_list, 2 write, 2 pdf_colorstack nodes
-   avail lists: 2:1289,3:840,4:221,5:779,6:128,7:12800,8:2,9:855,10:3,11:1193
+   avail lists: 2:1289,3:840,4:221,5:779,6:128,7:12815,8:2,9:855,10:3,11:1196
  50088 multiletter control sequences out of 65536+600000
  45 fonts using 3274863 bytes
  88i,13n,91p,584b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on main.pdf (1 page, 1033861 bytes).
+Output written on main.pdf (1 page, 1033952 bytes).
 
 PDF statistics: 103 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

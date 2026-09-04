@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1788512728.73623 "main.tex" "main.pdf" "main" 1788512732.04792 0
+["lualatex"] 1788515472.62964 "main.tex" "main.pdf" "main" 1788515474.83515 0
   "/home/abdulazizrohan/.texlive/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5brands-regular-400.luc" 1782987977.63378 180102 f7147e17e8de42719f8456d2132a6f53 ""
   "/home/abdulazizrohan/.texlive/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5free-solid-900.luc" 1782987977.55478 380927 d6fe6e53c3a00de94cfec2728177f905 ""
   "/home/abdulazizrohan/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1776700913.5677 128397 dc8cded2bbafe8195c86cdaea92e40b2 ""
@@ -223,8 +223,8 @@
   "/usr/share/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1775415801 10170 b1a2248f43cab899e3fe36f676176865 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1783309327 5385779 47c0c393a77fd4a098bacfd57d66b88a ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1783309190 5657352 f0d14ee7211ba6befacefd96b1c3c96f ""
-  "main.aux" 1788512731.75462 3210 933b96ff17aecdecac73846b8cac3b02 "lualatex"
-  "main.tex" 1788512726.77361 16428 d5c2e1e7840317147195a22df4df2908 ""
+  "main.aux" 1788515474.62372 3210 933b96ff17aecdecac73846b8cac3b02 "lualatex"
+  "main.tex" 1788515471.84871 16432 20eb2e3f62b0e3a3d6ec96ff9c8c4b22 ""
   "profile_photo.png" 1788512552.81341 914191 ea6b32c40154da3d3fb44e99627e2f65 ""
   (generated)
   "main.aux"
